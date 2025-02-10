@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+    font-family: "Manrope";
+    overflow: scroll;
+}
+
+.main{
+    display: flex;
+    width: 1000px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+}
+.drawers{
+    width: 500px;
+    height: 350px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.right-side{
+    padding: 20px;
+}
+
+.main-p{
+    color: grey;
+    margin: 30px 0;
+}
+.bottom-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.left-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.left-container img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.left-container div p{
+    color: grey;
+}
+
+.share{
+    background-color: hsl(212, 23%, 89%);
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 40px;
+    z-index: 1000;
+}
+
+.share-2{
+    background-color: hsl(212, 23%, 89%);
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 40px;
+    z-index: 1000;
+}
+
+
+
+.share-div{
+    position: absolute;
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    top: 50%;
+   transform: translateX(-40%);
+    display: none;
+   
+}
+
+.share:hover{
+    background-color: hsl(212, 23%, 99%);
+}
+
+.share-div.active{
+    display: flex;
+}
+
+.share-div p:hover{
+    color: white;
+    cursor: pointer;
+    
+}
+.share-div .share-2{
+    margin-top: 0;
+    padding: 0;
+    background-color: hsl(212, 23%, 89%);
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 40px;
+    z-index: 1100000000;
+}
+
+.share-div .share-2:hover{
+    margin-top: 0;
+    padding: 0;
+    background-color: hsl(212, 23%, 89%);
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 40px;
+}
+
+.share-div img:hover{
+    padding: 1px;
+    cursor: pointer;
+    box-shadow: 1px 1px 20px white;
+}
+
+.share.active-btn{
+    background-color: hsl(217, 19%, 35%);
+
+}
+
+.share-div::after{
+    content: "";
+    background-color: hsl(217, 19%, 35%);
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+    position: absolute;
+    transform: translateY(90%) rotate(45deg);
+}
+
+.share-div p{
+    color: hsl(0, 0%, 70%);
+    letter-spacing: 5px;
+    font-size: 14px;
+}
+
+
+
+@media(max-width:1340px){
+    .main{
+        width: 800px;
+    }
+    h2{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:1095px){
+    .main{
+        flex-direction: column;
+        width: 450px;
+    }
+    .drawers{
+        border-radius: 20px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 450px;
+
+    }
+
+    h2{
+        font-size: 20px;
+    }
+    .share-div{
+       position: absolute;
+        width: 450px;
+        height: 90px;
+        /* top: 81%; */
+        transform: translateX(-87%) translateY(270%);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+       
+    }
+    .share-div::after{
+        display: none;
+    }
+
+}
+
+@media(max-width: 550px){
+    .main{
+        flex-direction: column;
+        width: 350px;
+    }
+    .drawers{
+        border-radius: 20px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 350px;
+
+    }
+
+    h2{
+        font-size: 20px;
+    }
+    .share-div{
+       
+        width: 350px;
+        height: 90px;
+        transform: translateX(-83%) translateY(300%);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+       
+    }
+    .share-div::after{
+        display: none;
+    }
+
+}
+
+@media(max-width:386px){
+    .main{
+        flex-direction: column;
+        width: 300px;
+    }
+    .drawers{
+        border-radius: 20px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 300px;
+        height: 200px;
+
+    }
+
+    h2{
+        font-size: 20px;
+    }
+   
+    .share-div{
+       
+        width: 300px;
+        height: 100px;
+        /* top: 75%; */
+        transform: translateX(-80%) translateY(200%);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+       
+       
+    }
+   .share{
+    width: 35px;
+    height: 35px;
+    margin-top: 15px;
+
+   }
+
+}
